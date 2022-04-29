@@ -194,6 +194,7 @@ git репозиторий данного плагина:
 
 
 ![](https://github.com/t1g3pf4c3/UniJournalDoc/blob/main/img/Pastedimage20220425133251.png)
+
 ##### блок навигации
 
 встроен в шаблон по комментарию:
@@ -205,6 +206,7 @@ git репозиторий данного плагина:
 > bootstrap3\templates\frontend\pages\indexJournal.tpl
 
 ![](https://github.com/t1g3pf4c3/UniJournalDoc/blob/main/img/Pastedimage20220425133316.png)
+
 ##### блок подвала
 
 встроен в шаблон по комментарию:
@@ -216,9 +218,10 @@ git репозиторий данного плагина:
 > bootstrap3\templates\frontend\pages\indexJournal.tpl
 
 
-![](https://github.com/t1g3pf4c3/UniJournalDoc/blob/main/img/Pastedimage20220425133534.png)
+(https://github.com/t1g3pf4c3/UniJournalDoc/blob/main/img/Pastedimage20220425133534.png)
 
 ![](https://github.com/t1g3pf4c3/UniJournalDoc/blob/main/img/Pastedimage20220425133556.png)
+
 ##### страница архива
 
 страница шаблона:
@@ -226,6 +229,7 @@ git репозиторий данного плагина:
 > bootstrap3\templates\frontend\pages\issueArchive.tpl
 
 ![](https://github.com/t1g3pf4c3/UniJournalDoc/blob/main/img/Pastedimage20220425134445.png)
+
 ##### блок журнала в архиве журналов
 
 встроен в шаблон по комментарию:
@@ -237,6 +241,7 @@ git репозиторий данного плагина:
 > frontend\pages\issueArchive.tpl
 
 ![](https://github.com/t1g3pf4c3/UniJournalDoc/blob/main/img/Pastedimage20220425134054.png)
+
 #### переменные(локализация) для страницы добавлять  в файл
 
 sanse-test\lib\pkp\locale\ru_RU\user.po
@@ -343,12 +348,15 @@ sanse-test\lib\pkp\locale\ru_RU\user.po
 Была проведена работа с навигацией. Несколько уровней меню были объединены. Также в меню был добавлен выбор языка. Меню было стилизировано по шаблону данному университетом.
 
 ![](https://github.com/t1g3pf4c3/UniJournalDoc/blob/main/img/Pastedimage20220429215819.png)
+
 На главную страницу был добавлен архив последних выпусков
 
 ![](https://github.com/t1g3pf4c3/UniJournalDoc/blob/main/img/Pastedimage20220429215920.png)
+
 вставлен блок отвечающий за плагины.
 
 ![](https://github.com/t1g3pf4c3/UniJournalDoc/blob/main/img/Pastedimage20220429215946.png)
+
 Была проведена кастомизация темы boostrap 3.
 
 Добавленные переменные типа <strong> string</strong>  были локализованы.
