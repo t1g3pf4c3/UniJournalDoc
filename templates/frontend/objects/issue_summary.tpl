@@ -9,7 +9,7 @@
  *
  * @uses $issue Issue The issue
  *}
-<div class="issue-summary media">
+<div class="issue-summary media col-md-6">
 
 	{* Retrieve separate entries for $issueTitle and $issueSeries *}
 	{assign var=issueTitle value=$issue->getLocalizedTitle()}
@@ -17,17 +17,32 @@
 
 	{* Show cover image and use cover description *}
 	{if $issue->getLocalizedCoverImage()}
+		{if $home}
+		<div class="media-left">
+			<a class="cover" href="{$baseUrl}{"/index.php/sanse/issue/view/"}{$issue->getBestIssueId($currentJournal)}">
+				<img class="media-object" src="{$issue->getLocalizedCoverImageUrl()|escape}" alt="{$issue->getLocalizedCoverImageAltText()|escape|default:''}">
+			</a>
+		</div>
+		
+		{else}
 		<div class="media-left">
 			<a class="cover" href="{url|escape op="view" path=$issue->getBestIssueId($currentJournal)}">
 				<img class="media-object" src="{$issue->getLocalizedCoverImageUrl()|escape}" alt="{$issue->getLocalizedCoverImageAltText()|escape|default:''}">
 			</a>
 		</div>
+		{/if}
 	{/if}
 
 
 	<div class="media-body">
 		<h2 class="media-heading">
+			{if $home}
+			1
+			<a class="title" href="{$baseUrl}{"/index.php/sanse/issue/view/"}{$issue->getBestIssueId($currentJournal)}">
+			{else}
+			2
 			<a class="title" href="{url|escape op="view" path=$issue->getBestIssueId($currentJournal)}">
+			{/if}
 				{if $issueTitle}
 					{$issueTitle|escape}
 				{else}

@@ -14,7 +14,8 @@
 @gray-light:             lighten(@gray-base, 60%);   // #999
 @gray-lighter:           lighten(@gray-base, 93.5%); // #eee
 
-@brand-primary:         #2FA4E7;
+// @brand-primary:         #2FA4E7;
+@brand-primary:         #ff6d00;
 @brand-success:         #73A839;
 @brand-info:            #033C73;
 @brand-warning:         #DD5600;
@@ -33,7 +34,7 @@
 //** Global textual link color.
 @link-color:            @brand-primary;
 //** Link hover color set via `darken()` function.
-@link-hover-color:      darken(@link-color, 15%);
+@link-hover-color:      darken(@link-color, 5%);
 //** Link hover decoration.
 @link-hover-decoration: underline;
 
@@ -324,10 +325,10 @@
 //** Number of columns in the grid.
 @grid-columns:              12;
 //** Padding between columns. Gets divided in half for the left and right.
-@grid-gutter-width:         30px;
+@grid-gutter-width:         0px;
 // Navbar collapse
 //** Point at which the navbar becomes uncollapsed.
-@grid-float-breakpoint:     @screen-sm-min;
+@grid-float-breakpoint:     @screen-lg-min;
 //** Point at which the navbar begins collapsing.
 @grid-float-breakpoint-max: (@grid-float-breakpoint - 1);
 
@@ -371,9 +372,9 @@
 // Navbar links
 @navbar-default-link-color:                #fff;
 @navbar-default-link-hover-color:          #fff;
-@navbar-default-link-hover-bg:             darken(@navbar-default-bg, 10%);
+@navbar-default-link-hover-bg:             darken(@navbar-default-bg, 5%);
 @navbar-default-link-active-color:         #fff;
-@navbar-default-link-active-bg:            darken(@navbar-default-bg, 10%);
+@navbar-default-link-active-bg:            darken(@navbar-default-bg, 5%);
 @navbar-default-link-disabled-color:       #ddd;
 @navbar-default-link-disabled-bg:          transparent;
 
@@ -383,9 +384,9 @@
 @navbar-default-brand-hover-bg:            none;
 
 // Navbar toggle
-@navbar-default-toggle-hover-bg:           darken(@navbar-default-bg, 10%);
+@navbar-default-toggle-hover-bg:           darken(@navbar-default-bg, 5%);
 @navbar-default-toggle-icon-bar-bg:        #fff;
-@navbar-default-toggle-border-color:       darken(@navbar-default-bg, 10%);
+@navbar-default-toggle-border-color:       darken(@navbar-default-bg, 5%);
 
 
 //=== Inverted navbar

@@ -12,6 +12,8 @@
  *
  * @uses $currentTitle string The title to use for the current page.
  * @uses $currentTitleKey string Translation key for title of current page.
+ * @uses $currentTitleSecond string Translation key for title of current(second) page.
+ * @uses $firstLink
  *}
 
 <nav class="cmp_breadcrumbs" role="navigation" aria-label="{translate key="navigation.breadcrumbLabel"}">
@@ -22,11 +24,26 @@
 			</a>
 		</li>
 		<li class="active">
+			{if $firstLink}
+				<a href="{$firstLink}">
+			{/if}
 			{if $currentTitleKey}
 				{translate key=$currentTitleKey}
 			{else}
 				{$currentTitle|escape}
 			{/if}
+			{if $firstLink}
+				</a>
+			{/if}
 		</li>
+		{if $currentTitleSecond}
+		<li class="active">
+			{if $currentTitleKey}
+				{translate key=$currentTitleKey}
+			{else}
+				{$currentTitleSecond|escape}
+			{/if}
+		</li>
+		{/if}
 	</ol>
 </nav>

@@ -14,7 +14,7 @@
  * @uses $hasAccess bool Can this user access galleys for this context?
  * @uses $showGalleyLinks bool Show galley links to users without access?
  *}
-<div class="issue-toc">
+<div class="issue-toc col-md-12">
 
 	{* Indicate if this is only a preview *}
 	{if !$issue->getPublished()}

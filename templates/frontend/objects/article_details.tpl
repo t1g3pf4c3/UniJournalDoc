@@ -41,7 +41,7 @@
 
 	<div class="row">
 
-		<section class="article-sidebar col-md-4">
+		<section class="article-sidebar">
 
 			{* Screen-reader heading for easier navigation jumps *}
 			<h2 class="sr-only">{translate key="plugins.themes.bootstrap3.article.sidebar"}</h2>
