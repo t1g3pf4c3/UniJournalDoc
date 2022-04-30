@@ -1,0 +1,258 @@
+// Cerulean 3.3.5
+// Bootswatch
+// -----------------------------------------------------
+
+.btn-shadow(@color) {
+  #gradient > .vertical-three-colors(lighten(@color, 8%), @color, 60%, darken(@color, 4%));
+  filter: none;
+  border-bottom: 1px solid darken(@color, 10%);
+}
+
+// Navbar =====================================================================
+
+.navbar {
+  .btn-shadow(@navbar-default-bg);
+  filter: none;
+  .box-shadow(0 1px 10px rgba(0, 0, 0, 0.1));
+
+  &-default {
+
+    .badge {
+      background-color: #fff;
+      color: @navbar-default-bg;
+    }
+  }
+
+  &-inverse {
+    #gradient > .vertical-three-colors(lighten(@navbar-inverse-bg, 8%), lighten(@navbar-inverse-bg, 4%), 60%, darken(@navbar-inverse-bg, 2%));
+    filter: none;
+    border-bottom: 1px solid darken(@navbar-inverse-bg, 10%);
+
+    .badge {
+      background-color: #fff;
+      color: @navbar-inverse-bg;
+    }
+  }
+
+  .navbar-nav > li > a,
+  &-brand {
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (max-width: @grid-float-breakpoint-max) {
+
+  .navbar {
+
+    .dropdown-header {
+      color: #fff;
+    }
+
+    .dropdown-menu {
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
+
+// Buttons ====================================================================
+
+.btn {
+
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+
+  .caret {
+    border-top-color: #fff;
+  }
+}
+
+.btn-default {
+
+  .btn-shadow(@btn-default-bg);
+
+  &:hover {
+    color: @btn-default-color;
+  }
+
+  .caret {
+    border-top-color: @text-color;
+  }
+}
+
+.btn-default {
+  .btn-shadow(@btn-default-bg);
+}
+
+.btn-primary {
+  .btn-shadow(@btn-primary-bg);
+}
+
+.btn-success {
+  .btn-shadow(@btn-success-bg);
+}
+
+.btn-info {
+  .btn-shadow(@btn-info-bg);
+}
+
+.btn-warning {
+  .btn-shadow(@btn-warning-bg);
+}
+
+.btn-danger {
+  .btn-shadow(@btn-danger-bg);
+}
+
+// Typography =================================================================
+
+// Tables =====================================================================
+
+// Forms ======================================================================
+
+// Navs =======================================================================
+
+// Indicators =================================================================
+
+// Progress bars ==============================================================
+
+// Containers =================================================================
+
+.panel-primary,
+.panel-success,
+.panel-warning,
+.panel-danger,
+.panel-info {
+
+  .panel-heading,
+  .panel-title {
+    color: #fff;
+  }
+}
+
+//changed
+.p{
+  &-0{
+    padding: 0;
+  }
+}
+.page-header {
+  margin:0px;
+  .small{
+    color:@brand-primary !important;
+  }
+  
+}
+
+header{
+	border-radius:0 !important;
+	border:none !important;
+}
+#nav-menu{
+background:#58648e !important;
+}
+#nav-menu ul{
+background:#58648e !important;
+}
+#nav-menu a{
+color:#fff;
+}
+
+.navbar-header{
+	font-weight:500;
+	color:white;
+}
+.navbar-toggle{
+	position:absolute;
+	right:10px;
+	top:5px;
+	z-index:999;
+}
+.site-name {
+	color:#fff;
+}
+
+@media (min-width: 1200px) {
+    .pull-right-lg {
+        float: right;
+    }
+	.container-fluid{
+	max-width: 70%;
+	margin-left:0;
+	}
+// #main-navigation:first-child{
+//   margin-left: calc( calc(~"100vw - 1140px") / 2);
+// }
+}
+#nav-menu li{
+border-left:.5px solid #9fa0b7;
+cursor:pointer;
+}
+#nav-menu ul:first-child{
+border-right:.5px solid #9fa0b7;
+cursor:pointer;
+}
+.site-name{
+	font-size:15px;
+	display: table;
+	line-height: 1.2;
+	padding-top:110px;
+}
+
+.site-name a{
+	display: table;
+	max-width: 400px;
+	line-height: 1;
+}
+.site-name p{
+	display: table;
+	margin: 0;
+}
+
+.navbar-brand{
+	font-size:3rem;
+	padding:10px 0;
+	
+	
+}
+@media (min-width: 992px){
+	.container-l {
+		margin-right: calc( calc(~"100% - 940px") / 2);
+	}
+}
+@media (min-width: 1200px){
+	.container-l {
+		margin-right: calc( calc(~"100% - 1140px") / 2);
+	}
+}
+
+@media (min-width: 768px){
+	.container-l {
+		margin-right: calc( calc(~"100% - 720px") / 2);
+	}
+}
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12{
+	padding: 10px;
+}
+
+.media:first-child{
+	margin-top:15px;
+}
+.media {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.thumbnail{
+	margin-bottom:0;
+	border:none;
+}
+.thumbnail  p,.thumbnail  img{
+	margin-left: 0px;
+}
+.thumbnail>img, .thumbnail a>img{
+	margin-bottom:10px;
+}
+.media  a,.media  div{
+	padding-top:10px;
+}
