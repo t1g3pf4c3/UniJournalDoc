@@ -1,5 +1,10 @@
+# Доработка интерфейса  системы поддержки издательской деятельности OJS в соответствии с корпоративным стилем государственного университета "Дубна" для сетевого научного издания "Системный анализ в науке и образовании"
 
-# Отчет по практической деятельности
+## Над проектом работали:
+- Геоня Татьяна Сергеевна
+- Авдеева Эльвира Олеговна
+- Кунгуров Макар Евгеньевич
+- Кузнецов Михаил 
 
 # Структура
 
@@ -178,7 +183,7 @@ git репозиторий данного плагина:
 
 > bootstrap3\templates\frontend\pages\indexJournal.tpl
 
-![](https://github.com/t1g3pf4c3/UniJournalDoc/blob/main/img/Pastedimage20220425125449.png)
+![](img/Pastedimage20220425125449.png)
 
 ##### блок описания
 
@@ -192,7 +197,7 @@ git репозиторий данного плагина:
 >bootstrap3\templates\frontend\pages\indexJournal.tpl
 
 
-![](https://github.com/t1g3pf4c3/UniJournalDoc/blob/main/img/Pastedimage20220425133251.png)
+![](img/Pastedimage20220425133251.png)
 
 ##### блок навигации
 
@@ -204,7 +209,7 @@ git репозиторий данного плагина:
 
 > bootstrap3\templates\frontend\pages\indexJournal.tpl
 
-![](https://github.com/t1g3pf4c3/UniJournalDoc/blob/main/img/Pastedimage20220425133316.png)
+![](img/Pastedimage20220425133316.png)
 
 ##### блок подвала
 
@@ -217,9 +222,10 @@ git репозиторий данного плагина:
 > bootstrap3\templates\frontend\pages\indexJournal.tpl
 
 
-(https://github.com/t1g3pf4c3/UniJournalDoc/blob/main/img/Pastedimage20220425133534.png)
 
-![](https://github.com/t1g3pf4c3/UniJournalDoc/blob/main/img/Pastedimage20220425133556.png)
+![](img/Pastedimage20220425133534.png)
+
+![](img/Pastedimage20220425133556.png)
 
 ##### страница архива
 
@@ -227,7 +233,7 @@ git репозиторий данного плагина:
 
 > bootstrap3\templates\frontend\pages\issueArchive.tpl
 
-![](https://github.com/t1g3pf4c3/UniJournalDoc/blob/main/img/Pastedimage20220425134445.png)
+![](img/Pastedimage20220425134445.png)
 
 ##### блок журнала в архиве журналов
 
@@ -239,7 +245,7 @@ git репозиторий данного плагина:
 
 > frontend\pages\issueArchive.tpl
 
-![](https://github.com/t1g3pf4c3/UniJournalDoc/blob/main/img/Pastedimage20220425134054.png)
+![](img/Pastedimage20220425134054.png)
 
 #### переменные(локализация) для страницы добавлять  в файл
 
@@ -268,7 +274,7 @@ sanse-test\lib\pkp\locale\ru_RU\user.po
 	$templateMgr->display('frontend/pages/indexJournal.tpl'); 
 
  это запуск шаблона главной страницы, если журнал существует и публичен
- 
+
 по ссылке:
 > site\sanse-test\pages\issue\
 
@@ -287,18 +293,18 @@ sanse-test\lib\pkp\locale\ru_RU\user.po
 Смотрим каманды которые надо исполнить, чтобы достать эти данные
 
 	$this->setupTemplate($request);
-
+	
 		$page = isset($args[0]) ? (int) $args[0] : 1;
-
+	
 		$templateMgr = TemplateManager::getManager($request);
-
+	
 		$context = $request->getContext();
 		$count = $context->getData('itemsPerPage') ? $context->getData('itemsPerPage') : Config::getVar('interface', 'items_per_page');
 		
 		$offset = $page > 1 ? ($page - 1) * $count : 0;
-
+	
 		$params = array(
-
+	
 			'contextId' => $context->getId(),
 			'orderBy' => 'seq',
 			'orderDirection' => 'ASC',
@@ -306,7 +312,7 @@ sanse-test\lib\pkp\locale\ru_RU\user.po
 			'offset' => $offset,
 			'isPublished' => true,
 		);
-
+	
 		$issues = iterator_to_array(Services::get('issue')->getMany($params));
 
 Их мы нашли в файле <strong>IssueHandler.inc.php</strong> и перенесли в <strong>IndexHandler.inc.php </strong>
@@ -321,7 +327,7 @@ sanse-test\lib\pkp\locale\ru_RU\user.po
 
  Мы ограничили их число ранее, чтобы не бросалось в глаза. За это отвечала переменная <strong>count</strong>.В итоге, развернув журналы по образу другого шаблона, мы можем увидеть на главной странице нужные журналы.
 
-![](https://github.com/t1g3pf4c3/UniJournalDoc/blob/main/img/Pastedimage20220429204815.png)
+![](img/Pastedimage20220429204815.png)
 
 #### Кастомизация стилей
 
@@ -347,15 +353,15 @@ sanse-test\lib\pkp\locale\ru_RU\user.po
 
 Была проведена работа с навигацией. Несколько уровней меню были объединены. Также в меню был добавлен выбор языка. Меню было стилизировано по шаблону данному университетом.
 
-![](https://github.com/t1g3pf4c3/UniJournalDoc/blob/main/img/Pastedimage20220429215819.png)
+![](img/Pastedimage20220429215819.png)
 
 На главную страницу был добавлен архив последних выпусков
 
-![](https://github.com/t1g3pf4c3/UniJournalDoc/blob/main/img/Pastedimage20220429215920.png)
+![](img/Pastedimage20220429215920.png)
 
 вставлен блок отвечающий за плагины.
 
-![](https://github.com/t1g3pf4c3/UniJournalDoc/blob/main/img/Pastedimage20220429215946.png)
+![](img/Pastedimage20220429215946.png)
 
 Была проведена кастомизация темы boostrap 3.
 
@@ -374,4 +380,4 @@ sanse-test\lib\pkp\locale\ru_RU\user.po
 1. Модуль быстрой отправки.
 
 ### Документация на русском языке
-Дополнительная документация на русском языке может быть найдена [здесь](https://elib.bsu.by/bitstream/123456789/174391/1/Learn%20OJS%20>3.pdf)
+Дополнительная документация на русском языке может быть найдена [здесь](https://elib.bsu.by/bitstream/123456789/174391/1/Learn%20OJS%203.pdf)
