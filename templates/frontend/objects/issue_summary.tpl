@@ -37,10 +37,8 @@
 	<div class="media-body">
 		<h2 class="media-heading">
 			{if $home}
-			1
 			<a class="title" href="{$baseUrl}{"/index.php/sanse/issue/view/"}{$issue->getBestIssueId($currentJournal)}">
 			{else}
-			2
 			<a class="title" href="{url|escape op="view" path=$issue->getBestIssueId($currentJournal)}">
 			{/if}
 				{if $issueTitle}
