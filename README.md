@@ -179,7 +179,7 @@ Git репозиторий данного плагина:
 
 ### Блок статей
 
-![Блок статей](img/Pastedimage20220425125449.png){ width=250px } 
+![Блок статей](img/Articles.png){ width=250px } 
 
 ```php
 {include file="frontend/objects/issue_toc.tpl"}
@@ -200,7 +200,7 @@ Git репозиторий данного плагина:
 
 > bootstrap3/templates/frontend/pages/indexJournal.tpl
 
-![Блок описания](img/Pastedimage20220425133251.png){ width=150px }
+![Блок описания](img/Description.png){ width=150px }
 
 
 
@@ -214,16 +214,16 @@ Git репозиторий данного плагина:
 
 > bootstrap3/templates/frontend/pages/indexJournal.tpl
 
-![Навигация](img/Pastedimage20220425133316.png){ width=250px } 
+![Навигация](img/nav_menu.png){ width=250px } 
 
 ### Блок подвала
 Вызывается в шаблоне:  
 
 > bootstrap3/templates/frontend/pages/indexJournal.tpl  
 
-![Подвал-1](img/Pastedimage20220425133534.png){ width=250px } 
+![Подвал-1](img/footer_1.png){ width=250px } 
 
-![Подвал-2](img/Pastedimage20220425133556.png){ width=250px }  
+![Подвал-2](img/footer_2.png){ width=250px }  
 
 встроен в шаблон по комментарию:
 
@@ -233,7 +233,7 @@ Git репозиторий данного плагина:
 
 ### Страница архива
 
-![Старница архива](img/Pastedimage20220425134445.png){ width=250px }  
+![Старница архива](img/Page_arhive.png){ width=250px }  
 
 > bootstrap3/templates/frontend/pages/issueArchive.tpl
 
@@ -332,7 +332,7 @@ $templateMgr->display('frontend/pages/issueArchive.tpl');
 
 Их число было ограничено ранее. За это отвечала переменная <strong>count</strong>.В итоге, если развернуть журналы по образу другого шаблона, пользователь увидит на главной странице требуемые журналы.
 
-![Общий вид страницы](img/Pastedimage20220429204815.png){ width=250px }
+![Общий вид страницы](img/Page_home.png){ width=250px }
 
 ### Кастомизация стилей
 
@@ -360,11 +360,9 @@ $templateMgr->display('frontend/pages/issueArchive.tpl');
 
 - Все стили соответствуют "Гиду стиля университета"
 
-![Шаблон](img/Pastedimage20220429215819.png){ width=250px }
-
 - На главную страницу был добавлен архив последних выпусков
 
-![Архив](img/Pastedimage20220429215920.png){ width=250px }
+![Архив](img/last.png){ width=250px }
 
 - Вставлен блок отвечающий за плагины.
 
